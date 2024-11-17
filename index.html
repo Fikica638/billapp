@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+
+    <title>Bill Generation</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="bill-container">
+      <h1>Bill Generator</h1>
+      <div class="bill-header">
+        <h2>Aktuel LLC</h2>
+        <p>Adress: Pero Nakov, Madzari, Skopje, Macedonia</p>
+        <p>Phone :+389 10 10000</p>
+      </div>
+      <div class="product-entry">
+        <input type="text" id="product-name" placeholder="Product Name" style="border-radius: 10px; margin: 5px;">
+       
+         <input type="number" id="product-price" placeholder="Price" min="0" style="border-radius: 10px; margin: 5px;">
+         <input type="number" id="product-quantity" placeholder="Quantity" min="1" style="border-radius: 10px; margin: 5px;">
+        <button onclick="addProduct()" style="border-radius: 10px; color: white; background-color: #0765AC;">Add Prouct</button><br><br>
+      </div>
+     
+     <div class="bill-items">
+       <table id="bill-table" style="border-radius: 10px;">
+         <thead>
+           <tr>
+             <th>Product</th>
+             <th>Price</th>
+             <th>Quantity</th>
+             <th>Total</th>
+             <th>Actions</th>
+           </tr>
+         </thead>
+         <tbody></tbody>
+       </table>
+      </div>
+      <div class="bill-footer">
+        <p id="total">Total: $0.00</p>
+        <button onclick="generateBill()" style="border-radius: 10px; color: white; background-color: #0765AC;">Generate Bill</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
